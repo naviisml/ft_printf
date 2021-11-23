@@ -58,5 +58,8 @@ int	util_parse_chr(t_print *arg, char c)
 
 int	util_parse_percentage(t_print *arg, char c)
 {
-	return (util_parse_chr(arg, c));
+	ft_putchar_fd('%', arg->fd);
+	arg->flag = c;
+	arg->len += 1;
+	return (1);
 }

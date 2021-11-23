@@ -8,7 +8,7 @@ COMPILER_FLAGS = -Wall -Werror -Wextra
 
 # Configuration...
 BUILD_FOLDER	=	./build
-#BUILD_FILES		=	libft.a
+BUILD_FILES		=	libft.a
 
 # Library...
 LIBRARY			=	libft
