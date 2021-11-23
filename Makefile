@@ -1,4 +1,4 @@
-NAME = program
+NAME = libftprintf.a
 
 AR = @ar
 AR_FLAGS = -rcs
@@ -16,7 +16,16 @@ LIBRARY_PUTPUT	=	libft.a
 
 # Source Files...
 SOURCE_FOLDER	=	./srcs
-SOURCE_FILES	=	ft_example.c
+SOURCE_FILES	=	conversions/parse_fill.c \
+					conversions/parse_prefix.c \
+					flags/parse_string.c \
+					flags/parse_number.c \
+					flags/parse_hex.c \
+					flags/parse_example.c \
+					parser.c \
+					ft_print.c \
+					ft_printf.c \
+					ft_fprintf.c \
 
 # Object Files...
 EXTRA_FOLDERS	=	$(SOURCE_FOLDER)
@@ -32,25 +41,27 @@ $(OBJECT_FOLDER)/%.o: %.c
 	@$(COMPILER) $(COMPILER_FLAGS) -c $< -o $@
 
 # Compile the program...
-$(NAME): $(OBJECT_FILES)
+$(NAME): library $(OBJECT_FILES)
 	@echo "Building $(NAME)... (100%)"
-	$(COMPILER) $(COMPILER_FLAGS) $(OBJECT_FILES) $(addprefix $(BUILD_FOLDER)/, $(BUILD_FILES)) -o $(NAME)
+	$(AR) $(AR_FLAGS) $(NAME) $(OBJECT_FILES)
 
 # Compile a library...
 library:
 	@echo "Compiling $(LIBRARY)..."
 	@$(MAKE) bonus -C $(LIBRARY)
 	@mkdir -p $(BUILD_FOLDER)
-	@mv $(addprefix $(LIBRARY)/, $(LIBRARY_PUTPUT)) $(addprefix $(BUILD_FOLDER)/, $(LIBRARY_PUTPUT))
+	@mv $(addprefix $(LIBRARY)/, $(LIBRARY_PUTPUT)) $(NAME)
 
 all: $(NAME)
 
 # Remove the `object` folder and files...
 clean:
+	@$(MAKE) clean -C $(LIBRARY)
 	@rm -rf $(OBJECT_FILES) $(OBJECT_FOLDER)
 
 # Remove the `object` and `build` folder and files...
 fclean: clean
+	@$(MAKE) fclean -C $(LIBRARY)
 	@rm -rf $(NAME) $(BUILD_FOLDER)
 
 # Clean the program up and re-compile it...

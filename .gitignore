@@ -1,6 +1,7 @@
 # Folders
 objects/
 build/
+tests/
 
 # Files
 *.DS_Store

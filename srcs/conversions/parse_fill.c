@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_example.c                                       :+:    :+:            */
+/*   parse_fill.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: nismail <nismail@student.codam.nl>           +#+                     */
+/*   By: navi <navi@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/11/23 00:26:25 by nismail       #+#    #+#                 */
-/*   Updated: 2021/11/23 00:50:05 by nismail       ########   odam.nl         */
+/*   Created: 2021/11/17 14:03:25 by navi          #+#    #+#                 */
+/*   Updated: 2021/11/19 22:23:43 by nismail       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_example.h"
+#include "../../includes/ft_printf.h"
 
-int	main(void)
+/*
+*
+* The util_set_fill() function ...
+*
+*/
+
+int	util_set_fill(t_print *arg, char c)
 {
-	return (0);
+	arg->len += 1;
+	arg->flag = c;
+	return (1);
 }
