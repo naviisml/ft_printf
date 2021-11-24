@@ -6,7 +6,7 @@
 /*   By: navi <navi@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/17 10:39:26 by navi          #+#    #+#                 */
-/*   Updated: 2021/11/20 21:27:22 by navi          ########   odam.nl         */
+/*   Updated: 2021/11/24 04:33:39 by navi          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	util_parse_hex_tolower(t_print *arg, char c);
 int	util_parse_hex_toupper(t_print *arg, char c);
 int	util_parse_pointer(t_print *arg, char c);
 
-int	util_set_prefix(t_print *arg, char c);
+int	util_set_char_prefix(t_print *arg, char c);
 int	util_set_fill(t_print *arg, char c);
 
 /*
@@ -56,8 +56,8 @@ t_flags	g_flags[] = {
 {'.', util_parse_example},
 {'#', util_parse_example},
 {'0', util_set_fill},
-{'+', util_set_prefix},
-{' ', util_set_prefix}
+{'+', util_set_char_prefix},
+{' ', util_set_char_prefix}
 };
 
 /*
