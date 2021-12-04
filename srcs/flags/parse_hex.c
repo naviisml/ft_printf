@@ -6,7 +6,7 @@
 /*   By: navi <navi@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/17 14:03:25 by navi          #+#    #+#                 */
-/*   Updated: 2021/11/20 21:25:29 by navi          ########   odam.nl         */
+/*   Updated: 2021/12/04 17:01:58 by nismail       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,17 +83,18 @@ int	util_parse_pointer(t_print *arg, char c)
 
 	hex = va_arg(arg->args, void *);
 	arg->flag = c;
+	arg->len += 2;
+	ft_putstr_fd("0x", arg->fd);
 	if (!hex)
 	{
-		ft_putstr_fd("(nil)", arg->fd);
-		arg->len += 5;
+		ft_putstr_fd("0", arg->fd);
+		arg->len += 1;
 	}
 	else
 	{
 		value = ft_inttohex((unsigned long long)hex);
-		ft_putstr_fd("0x", arg->fd);
 		ft_putstr_fd(ft_strtolower(value), arg->fd);
-		arg->len += ft_strlen(value) + 2;
+		arg->len += ft_strlen(value);
 		free(value);
 	}
 	return (1);
