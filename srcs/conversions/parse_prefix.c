@@ -6,18 +6,15 @@
 /*   By: navi <navi@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/17 14:03:25 by navi          #+#    #+#                 */
-/*   Updated: 2021/11/24 04:38:08 by navi          ########   odam.nl         */
+/*   Updated: 2021/12/04 17:04:48 by nismail       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf.h"
 
 /*
-*
-* The util_print_prefix() function ...
-*
-*/
-
+ * The util_print_prefix() function ...
+ */
 int	util_print_prefix(t_print *arg, int nbr)
 {
 	if (arg->prefix == 0)
@@ -29,11 +26,8 @@ int	util_print_prefix(t_print *arg, int nbr)
 }
 
 /*
-*
-* The util_set_str_prefix() function ...
-*
-*/
-
+ * The util_set_str_prefix() function ...
+ */
 int	util_set_str_prefix(t_print *arg, char *str)
 {
 	arg->len += ft_strlen(str);
@@ -42,11 +36,8 @@ int	util_set_str_prefix(t_print *arg, char *str)
 }
 
 /*
-*
-* The util_set_char_prefix() function ...
-*
-*/
-
+ * The util_set_char_prefix() function ...
+ */
 int	util_set_char_prefix(t_print *arg, char c)
 {
 	int		res;

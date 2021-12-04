@@ -6,7 +6,7 @@
 /*   By: navi <navi@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/17 10:39:26 by navi          #+#    #+#                 */
-/*   Updated: 2021/11/24 04:33:39 by navi          ########   odam.nl         */
+/*   Updated: 2021/12/04 17:03:32 by nismail       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ int	util_parse_str(t_print *arg, char c);
 int	util_parse_chr(t_print *arg, char c);
 int	util_parse_int(t_print *arg, char c);
 int	util_parse_uint(t_print *arg, char c);
-int	util_parse_example(t_print *arg, char c);
 int	util_parse_hex_tolower(t_print *arg, char c);
 int	util_parse_hex_toupper(t_print *arg, char c);
 int	util_parse_pointer(t_print *arg, char c);
 
+int	util_parse_example(t_print *arg, char c);
 int	util_set_char_prefix(t_print *arg, char c);
 int	util_set_fill(t_print *arg, char c);
 

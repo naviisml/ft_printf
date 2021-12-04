@@ -18,10 +18,10 @@ LIBRARY_PUTPUT	=	libft.a
 SOURCE_FOLDER	=	./srcs
 SOURCE_FILES	=	conversions/parse_fill.c \
 					conversions/parse_prefix.c \
+					conversions/parse_example.c \
 					flags/parse_string.c \
 					flags/parse_number.c \
 					flags/parse_hex.c \
-					flags/parse_example.c \
 					parser.c \
 					ft_print.c \
 					ft_printf.c \
