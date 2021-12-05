@@ -6,14 +6,14 @@
 /*   By: nismail <nismail@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/30 13:18:33 by nismail       #+#    #+#                 */
-/*   Updated: 2021/11/23 01:31:00 by nismail       ########   odam.nl         */
+/*   Updated: 2021/12/05 16:06:43 by navi          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "../includes/libft.h"
+# include "libft.h"
 # include <stdarg.h>
 
 int	ft_vprint(int fd, const char *format, va_list args);
