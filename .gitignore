@@ -1,8 +1,8 @@
 # Folders
-.vscode
+.vscode/
 objects/
 build/
-tests/
+tester/
 
 # Files
 *.DS_Store
