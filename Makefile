@@ -30,7 +30,7 @@ EXTRA_FOLDERS	=	$(SOURCE_FOLDER)
 OBJECT_FOLDER	=	./objects
 OBJECT_FILES	=	$(addprefix $(OBJECT_FOLDER)/, $(addprefix $(SOURCE_FOLDER)/, $(SOURCE_FILES:.c=.o)))
 
-.PHONY =  $(NAME) $(LIBRARY) all library clean fclean re dev
+.PHONY =  $(NAME) $(LIBRARY) all library clean fclean re tester
 
 # Compile the .c files to .o files...
 $(OBJECT_FOLDER)/%.o: %.c
@@ -41,13 +41,13 @@ $(OBJECT_FOLDER)/%.o: %.c
 # Compile the program...
 $(NAME): $(OBJECT_FILES)
 	@echo "Building $(NAME)... (100%)"
-	$(AR) $(AR_FLAGS) $(NAME) $(LIBRARY) $(OBJECT_FILES)
+	$(AR) $(AR_FLAGS) $(NAME) $(OBJECT_FILES)
 
 # Compile a library...
 $(LIBRARY):
 	@echo "Compiling \t$(LIBRARY)..."
 	@$(MAKE) bonus -C $(LIBRARY_FOLDER)
-	@mv $(addprefix $(LIBRARY_FOLDER)/, $(LIBRARY)) $(LIBRARY)
+	@mv $(addprefix $(LIBRARY_FOLDER)/, $(LIBRARY)) $(NAME)
 
 all: $(LIBRARY) $(NAME)
 
@@ -64,7 +64,6 @@ fclean: clean
 # Clean the program up and re-compile it...
 re: fclean all
 
-# Re-compile the program and run the script...
-dev: re
-	@echo "Running $(NAME)...""
-	@$(NAME)
+# Run the tester (Helper)
+tester: all
+	@$(MAKE) -C ./tester
