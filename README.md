@@ -8,7 +8,7 @@ The arguments after the first are treated as strings if the corresponding format
 
 - ft_printf & ft_fprintf
 - Conversion for `%u`, `$d` `%i`, `%c`, `%s`, `%p`, `%x`, `%X`, `%%`
-- Conversion for `-`, `+`, `0`, `.`, `#`, ` `
+- <strike>Conversion for `-`, `+`, `0`, `.`, `#`, ` `</strike>
 
 ## Prototypes
 
@@ -26,6 +26,6 @@ int	ft_fprintf(int fd, const char *format, ...);
 
 ## Results
 
-**Score:** NaN
+**Score:** 100/100
 
-**Date:** NaN
+**Date:** 04-12-2021
