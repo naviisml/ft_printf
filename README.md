@@ -4,12 +4,6 @@ The ft_printf() function formats and prints its arguments, after the first, unde
 
 The arguments after the first are treated as strings if the corresponding format is either c, b or s; otherwise it is evaluated as a C constant.
 
-## Results
-
-**Score:** NaN
-
-**Date:** NaN
-
 ## Features
 
 - ft_printf & ft_fprintf
@@ -29,3 +23,9 @@ int	ft_printf(const char *format, ...);
 ```
 int	ft_fprintf(int fd, const char *format, ...);
 ```
+
+## Results
+
+**Score:** NaN
+
+**Date:** NaN
