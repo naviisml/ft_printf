@@ -39,7 +39,7 @@ $(OBJECT_FOLDER)/%.o: %.c
 	@$(COMPILER) $(COMPILER_FLAGS) -c $< -o $@
 
 # Compile the program...
-$(NAME): $(OBJECT_FILES)
+$(NAME): $(LIBRARY) $(OBJECT_FILES)
 	@echo "Building $(NAME)... (100%)"
 	$(AR) $(AR_FLAGS) $(NAME) $(OBJECT_FILES)
 
@@ -49,7 +49,7 @@ $(LIBRARY):
 	@$(MAKE) bonus -C $(LIBRARY_FOLDER)
 	@mv $(addprefix $(LIBRARY_FOLDER)/, $(LIBRARY)) $(NAME)
 
-all: $(LIBRARY) $(NAME)
+all: $(NAME)
 
 # Remove the `object` folder and files...
 clean:
@@ -63,7 +63,3 @@ fclean: clean
 
 # Clean the program up and re-compile it...
 re: fclean all
-
-# Run the tester (Helper)
-tester: all
-	@$(MAKE) -C ./tester
