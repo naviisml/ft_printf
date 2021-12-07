@@ -6,7 +6,7 @@
 /*   By: navi <navi@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/17 14:03:25 by navi          #+#    #+#                 */
-/*   Updated: 2021/12/04 17:04:48 by nismail       ########   odam.nl         */
+/*   Updated: 2021/12/07 02:42:01 by navi          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	util_print_prefix(t_print *arg, int nbr)
 {
 	if (arg->prefix == 0)
 		return (0);
-	arg->len += 1;
 	if (nbr >= 0)
 		ft_putstr_fd(arg->prefix, arg->fd);
 	return (1);
