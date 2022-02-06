@@ -10,6 +10,25 @@ The arguments after the first are treated as strings if the corresponding format
 - Conversion for `%u`, `$d` `%i`, `%c`, `%s`, `%p`, `%x`, `%X`, `%%`
 - <strike>Conversion for `-`, `+`, `0`, `.`, `#`, ` `</strike>
 
+## Requirements
+
+- gcc
+- make
+
+## Installation
+
+**Step 1. Install this repository**
+
+```
+git clone https://github.com/naviisml/ft_printf
+```
+
+**Step 2. Compile the program**
+
+```
+make all
+```
+
 ## Prototypes
 
 **ft_printf**
@@ -29,3 +48,5 @@ int	ft_fprintf(int fd, const char *format, ...);
 **Score:** 100/100
 
 **Date:** 04-12-2021
+
+<div align=center>Made with tons of ☕ and ❤️ by <a href="https://github.com/naviisml">Navi</a></div>
